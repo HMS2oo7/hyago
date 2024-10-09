@@ -1,0 +1,72 @@
+﻿var
+   // Seção de Declarações das variáveis
+   cadastro:caractere
+   numero_quarto: inteiro
+   dias_hospedagem: real
+   plano_hospedagem: caracter
+   site:inteiro
+   telefone:inteiro
+Inicio
+   // Seção de Comandos, procedimentos, funções, operadores, etc...
+
+
+   escreval("Bom dia, para qual dia foi feita sua hospedagem? ")
+   leia (dias_hospedagem)
+
+
+   // Loop para validar o tipo de cadastro (site ou telefone)
+   repita
+      escreval("Foi feito por site ou telefone? (Digite 'site' ou 'telefone') ")
+      leia (cadastro)
+
+
+   ate (cadastro = "site") ou (cadastro = "SITE") ou (cadastro = "TELEFONE") ou (cadastro = "telefone")
+
+
+   // Escolha de acordo com o cadastro
+   escolha cadastro
+   caso "site"
+      escreval ("Qual seria o número do quarto que foi entregue? ")
+      leia (numero_quarto)
+      se numero_quarto < 50 entao
+         escreval("Seu cadastro informa que você ficará até 10 dias.")
+      senao
+         escreval("Você ficará até 20 dias.")
+      fimse
+
+
+   caso "telefone"
+      escreval ("Qual foi o número do quarto que você recebeu por SMS? ")
+      leia (numero_quarto)
+      se numero_quarto < 50 entao
+         escreval("Seu cadastro informa que você ficará até 10 dias.")
+      senao
+         escreval("Você ficará até 20 dias.")
+      fimse
+
+
+   fimescolha
+
+
+   // Validação do plano de hospedagem
+   repita
+      escreval("Qual foi o plano que você escolheu? (Digite 'plano simples' ou 'plano premium')")
+      leia (plano_hospedagem)
+
+
+      escolha plano_hospedagem
+         caso "plano simples"
+            escreval("Você possui direito ao quarto e à lanchonete com uma custo de serviços.")
+
+
+         caso "plano premium"
+            escreval("Você possui direito ao quarto, lanchonete e sem custos adicionais de serviço.")
+
+
+         senao
+            escreval("Plano inválido! Tente novamente.")
+      fimescolha
+   ate (plano_hospedagem = "plano simples") ou (plano_hospedagem = "plano premium")
+
+
+Fimalgoritmo
